@@ -1,0 +1,86 @@
+<html>
+  <title>Untuk Windi 2</title>
+  <style>
+    body {
+      background-color: pink;
+      font-family: cursive;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    #slideshow {
+      width: 90%;
+      max-width: 350px;
+      aspect-ratio: 2/3;
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    }
+
+    #slideshow img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+      border-radius: 12px;
+    }
+
+    #slideshow img.active {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+    <p><h2>Halaman Kedua Dari Web Untuk Windi</h2></p>
+
+  <div id="slideshow">
+    <img src="sekolah.png" class="active">
+    <img src="gandengan.png">
+    <img src="cincin.png">
+    <img src="peluk.png">
+    <img src="ss.png">
+  </div>
+
+  <script>
+    let index = 0;
+    const images = document.querySelectorAll('#slideshow img');
+
+    setInterval(() => {
+      images[index].classList.remove('active');
+      index = (index + 1) % images.length;
+      images[index].classList.add('active');
+    }, 5000);
+  </script>
+
+<audio controls>
+    <source src="a thousand years.mp3" type="audio/mpeg">
+  </audio>
+
+  <h5>(*silahkan klik agar dapat mendengarkan)</h5>
+
+  <h2>Aku Mungkin Telah Menghapus Foto-Foto Mu,
+    Tapi Tidak Untuk Foto Kita Berdua.Aku Masih
+    Menyimpan Semuanya Itu Adalah Satu Hal Yang
+    Paling Berharga Yang Tidak Bisa Untuk Aku Lupakan.
+    Semua Awal Pertemuan Dan Perjalan Kita Serta Semua
+    Kenangan Yang Telah Kita Lakukan Bersama Akan
+    Tetap Abadi Bagiku.
+  </h2>
+</body>
+</html>
+
